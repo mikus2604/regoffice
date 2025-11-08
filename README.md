@@ -250,7 +250,7 @@ This is a private business website. For changes or improvements, contact the dev
 
 **RegStreet (RegStreet Ltd)**
 Suite 2, 2nd Floor, 309 High Street
-West Bromwich
+West Midlands
 West Midlands
 B70 8LX
 United Kingdom

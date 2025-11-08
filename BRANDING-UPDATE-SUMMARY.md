@@ -18,7 +18,7 @@
   ```
   Suite 2, 2nd Floor
   309 High Street
-  West Bromwich
+  West Midlands
   West Midlands
   B70 8LX
   United Kingdom
@@ -82,7 +82,7 @@ Added `legalName` field to distinguish trading name from registered company:
 **Before:**
 ```
 309 High Street
-West Bromwich
+West Midlands
 West Midlands
 B70 8NJ
 ```
@@ -91,7 +91,7 @@ B70 8NJ
 ```
 Suite 2, 2nd Floor
 309 High Street
-West Bromwich
+West Midlands
 West Midlands
 B70 8LX
 ```

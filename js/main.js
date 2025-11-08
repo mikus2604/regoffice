@@ -1,5 +1,5 @@
 /**
- * JMAM Services - Main JavaScript
+ * RegStreet - Main JavaScript
  * Handles navigation, form validation, and interactive elements
  */
 
@@ -481,6 +481,67 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.body.insertBefore(skipLink, document.body.firstChild);
+});
+
+// ========================================
+// Sandwell Hub Tooltip - Keyboard Accessibility
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const infoIcon = document.querySelector('.sandwell-hub-benefit-box .info-icon');
+    const tooltip = document.querySelector('.sandwell-hub-benefit-box .disclaimer-tooltip');
+
+    if (infoIcon && tooltip) {
+        // Keyboard accessibility - show tooltip on focus
+        infoIcon.addEventListener('focus', function() {
+            tooltip.style.opacity = '1';
+            tooltip.style.pointerEvents = 'auto';
+        });
+
+        infoIcon.addEventListener('blur', function() {
+            tooltip.style.opacity = '0';
+            tooltip.style.pointerEvents = 'none';
+        });
+
+        // Handle viewport overflow on mobile
+        function adjustTooltipPosition() {
+            const tooltipRect = tooltip.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+
+            // If tooltip overflows right edge
+            if (tooltipRect.right > viewportWidth) {
+                tooltip.style.left = 'auto';
+                tooltip.style.right = '0';
+                tooltip.style.transform = 'none';
+            }
+
+            // If tooltip overflows left edge
+            if (tooltipRect.left < 0) {
+                tooltip.style.left = '0';
+                tooltip.style.right = 'auto';
+                tooltip.style.transform = 'none';
+            }
+        }
+
+        // Adjust position when showing tooltip
+        infoIcon.addEventListener('mouseenter', adjustTooltipPosition);
+        infoIcon.addEventListener('focus', adjustTooltipPosition);
+
+        // Allow Enter and Space to toggle tooltip when focused
+        infoIcon.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const isVisible = tooltip.style.opacity === '1';
+                tooltip.style.opacity = isVisible ? '0' : '1';
+                tooltip.style.pointerEvents = isVisible ? 'none' : 'auto';
+            }
+
+            // Close tooltip with Escape key
+            if (e.key === 'Escape') {
+                tooltip.style.opacity = '0';
+                tooltip.style.pointerEvents = 'none';
+            }
+        });
+    }
 });
 
 // ========================================

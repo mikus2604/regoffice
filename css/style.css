@@ -1,5 +1,5 @@
 /* ========================================
-   JMAM Services - Main Stylesheet
+   RegStreet - Main Stylesheet
    Navy & White Corporate Theme
    ======================================== */
 
@@ -158,8 +158,14 @@ strong {
 
 .logo a {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     color: var(--color-white);
+}
+
+.logo-img {
+    height: 75px;
+    width: auto;
+    display: block;
 }
 
 .logo-text {
@@ -364,6 +370,128 @@ strong {
 }
 
 /* ========================================
+   Sandwell Hub Benefit Box
+   ======================================== */
+.sandwell-hub-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+    background-color: var(--color-white);
+}
+
+.sandwell-hub-benefit-box {
+    background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+    border: 2px solid var(--color-navy-accent);
+    border-radius: var(--border-radius-lg);
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sandwell-hub-benefit-box .benefit-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.sandwell-hub-benefit-box .gift-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.sandwell-hub-benefit-box .benefit-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-navy-primary);
+    margin: 0;
+    font-family: var(--font-headings);
+}
+
+.sandwell-hub-benefit-box .benefit-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-dark-grey);
+    margin-bottom: var(--spacing-md);
+}
+
+.sandwell-hub-benefit-box .benefit-link {
+    display: inline-block;
+    color: var(--color-navy-accent);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.sandwell-hub-benefit-box .benefit-link:hover {
+    text-decoration: underline;
+    color: var(--color-navy-light);
+}
+
+.sandwell-hub-benefit-box .benefit-disclaimer {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
+.sandwell-hub-benefit-box .info-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    color: var(--color-mid-grey);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color var(--transition-fast);
+    position: relative;
+}
+
+.sandwell-hub-benefit-box .info-icon:hover,
+.sandwell-hub-benefit-box .info-icon:focus {
+    color: var(--color-navy-accent);
+}
+
+.sandwell-hub-benefit-box .disclaimer-tooltip {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    right: 0;
+    background-color: #1F2937;
+    color: #FFFFFF;
+    padding: 14px 18px;
+    border-radius: 8px;
+    width: 450px;
+    max-width: 80vw;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+    white-space: normal;
+}
+
+.sandwell-hub-benefit-box .disclaimer-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 8px;
+    border: 7px solid transparent;
+    border-top-color: #1F2937;
+}
+
+.sandwell-hub-benefit-box .info-icon:hover + .disclaimer-tooltip,
+.sandwell-hub-benefit-box .info-icon:focus + .disclaimer-tooltip {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ========================================
    Services Overview
    ======================================== */
 .services-overview {
@@ -441,8 +569,8 @@ strong {
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-md);
 }
 
 .benefit-card {
@@ -1354,4 +1482,167 @@ strong {
     font-size: 0.95rem;
     color: var(--color-light-grey);
     margin: 0;
+}
+
+/* ========================================
+   SVG Icon Styles
+   ======================================== */
+
+/* General SVG icon styling */
+.trust-icon img,
+.service-icon img,
+.service-icon-large img,
+.pricing-icon img,
+.approach-icon img,
+.serve-icon img,
+.accred-icon img,
+.method-icon img,
+.qs-icon img,
+.gift-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    stroke: var(--color-navy-primary);
+    transition: all var(--transition-medium);
+}
+
+/* Trust bar icons */
+.trust-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+}
+
+.trust-icon img {
+    stroke: var(--color-navy-accent);
+}
+
+/* Service card icons */
+.service-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-icon img {
+    stroke: var(--color-navy-accent);
+}
+
+.service-card:hover .service-icon img {
+    stroke: var(--color-navy-primary);
+    transform: scale(1.1);
+}
+
+/* Service detail page large icons */
+.service-icon-large {
+    width: 4rem;
+    height: 4rem;
+    flex-shrink: 0;
+}
+
+.service-icon-large img {
+    stroke: var(--color-navy-accent);
+}
+
+/* Pricing card icons */
+.pricing-icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto var(--spacing-sm);
+}
+
+.pricing-icon img {
+    stroke: var(--color-navy-accent);
+}
+
+.pricing-card:hover .pricing-icon img {
+    stroke: var(--color-navy-primary);
+    transform: scale(1.1);
+}
+
+/* Approach icons */
+.approach-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.approach-icon img {
+    stroke: var(--color-navy-accent);
+}
+
+/* Serve icons */
+.serve-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.serve-icon img {
+    stroke: var(--color-navy-accent);
+}
+
+/* Accreditation icons */
+.accred-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.accred-icon img {
+    stroke: var(--color-navy-accent);
+}
+
+/* Contact method icons */
+.method-icon {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+}
+
+.method-icon img {
+    stroke: var(--color-navy-accent);
+}
+
+/* Quick service icons */
+.qs-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.qs-icon img {
+    stroke: var(--color-navy-accent);
+}
+
+.quick-service-card:hover .qs-icon img {
+    stroke: var(--color-navy-primary);
+    transform: scale(1.1);
+}
+
+/* Gift icon (special styling) */
+.gift-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+}
+
+.gift-icon img {
+    stroke: var(--color-navy-accent);
+}
+
+/* Inline icons (checkmarks, etc.) */
+.inline-icon {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.35rem;
+    margin-top: -2px;
+    stroke: var(--color-success);
+}
+
+/* Featured pricing card icons */
+.pricing-card.featured .pricing-icon img {
+    stroke: var(--color-white);
 }

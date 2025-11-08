@@ -1,5 +1,5 @@
 /* ========================================
-   JMAM Services - Responsive Stylesheet
+   RegStreet - Responsive Stylesheet
    Mobile-First Responsive Design
    ======================================== */
 
@@ -76,6 +76,23 @@
     .trust-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
+    }
+
+    /* Sandwell Hub Benefit Box */
+    .sandwell-hub-benefit-box {
+        padding: 20px;
+    }
+
+    .sandwell-hub-benefit-box .benefit-header h3 {
+        font-size: 1.125rem;
+    }
+
+    .sandwell-hub-benefit-box .benefit-description {
+        font-size: 0.9375rem;
+    }
+
+    .sandwell-hub-benefit-box .disclaimer-tooltip {
+        max-width: 280px;
     }
 
     /* Services Grid */
@@ -187,6 +204,10 @@
     }
 
     /* Logo */
+    .logo-img {
+        height: 54px;
+    }
+
     .logo-text {
         font-size: 1.25rem;
     }
@@ -254,6 +275,17 @@
     .trust-item {
         flex-direction: column;
         text-align: center;
+    }
+
+    /* Sandwell Hub Benefit Box - Mobile */
+    .sandwell-hub-benefit-box {
+        padding: 16px;
+        padding-bottom: 48px; /* Extra space for disclaimer icon */
+    }
+
+    .sandwell-hub-benefit-box .benefit-disclaimer {
+        left: 16px;
+        bottom: 12px;
     }
 
     /* Contact Methods */
