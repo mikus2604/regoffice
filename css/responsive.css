@@ -168,6 +168,26 @@
         font-size: 0.75rem;
     }
 
+    /* Ensure toggle switch displays properly on mobile */
+    .pricing-toggle-switch {
+        width: 60px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+    .pricing-toggle-switch input {
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+        pointer-events: none !important;
+    }
+
+    .toggle-slider {
+        display: block;
+        pointer-events: auto;
+    }
+
     .pricing-grid {
         grid-template-columns: 1fr;
     }
