@@ -1,0 +1,27 @@
+# robots.txt for RegStreet (JMAM Services Ltd)
+# https://regstreet.co.uk
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://regstreet.co.uk/sitemap.xml
+
+# Crawl delay (optional - adjust as needed)
+# Crawl-delay: 1
+
+# Block access to sensitive areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all CSS and JavaScript files for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Block specific bot types (optional)
+# User-agent: AhrefsBot
+# Crawl-delay: 2
+
+# User-agent: SemrushBot
+# Crawl-delay: 2

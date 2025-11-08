@@ -1,0 +1,512 @@
+/* ========================================
+   JMAM Services - Responsive Stylesheet
+   Mobile-First Responsive Design
+   ======================================== */
+
+/* ========================================
+   Tablet Breakpoint (768px and below)
+   ======================================== */
+@media (max-width: 768px) {
+    /* Typography Adjustments */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    /* Navigation - Mobile Menu */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-navy-primary);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        gap: 0;
+        display: none;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: var(--spacing-sm);
+        width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+
+    .trust-line {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+
+    /* Trust Bar */
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Benefits */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Steps */
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Service Detail Pages */
+    .service-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-pricing-cta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .costs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FAQ */
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* About Page */
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .serve-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .accreditation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Spacing Adjustments */
+    :root {
+        --spacing-xl: 3rem;
+        --spacing-lg: 2rem;
+    }
+}
+
+/* ========================================
+   Mobile Breakpoint (480px and below)
+   ======================================== */
+@media (max-width: 480px) {
+    /* Typography */
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.125rem; }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Container Padding */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* Logo */
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    .logo-tagline {
+        font-size: 0.7rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-large {
+        padding: 0.85rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Service Cards */
+    .service-icon {
+        font-size: 2.5rem;
+    }
+
+    .service-icon-large {
+        font-size: 3rem;
+    }
+
+    /* Steps */
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    /* Pricing */
+    .amount {
+        font-size: 2.5rem;
+    }
+
+    .discounted-price {
+        font-size: 2rem;
+    }
+
+    /* About Page - Grids */
+    .serve-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .quick-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Trust Bar - Stack Items */
+    .trust-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Contact Methods */
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Service Pricing CTA */
+    .price-box {
+        text-align: center;
+    }
+
+    /* Hours List - Stack on Mobile */
+    .hours-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Package Cards */
+    .badge {
+        top: -10px;
+        right: var(--spacing-sm);
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    /* Spacing Adjustments */
+    :root {
+        --spacing-xl: 2.5rem;
+        --spacing-lg: 1.5rem;
+    }
+
+    .page-header,
+    .hero,
+    .services-overview,
+    .benefits,
+    .how-it-works,
+    .final-cta,
+    .service-detail,
+    .pricing-section,
+    .packages-section,
+    .additional-costs,
+    .transparency-section,
+    .faq-section,
+    .about-story,
+    .approach-section,
+    .who-we-serve,
+    .commitment-section,
+    .location-section,
+    .accreditations,
+    .contact-section,
+    .quick-services,
+    .legal-content {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .trust-bar {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    /* Form Elements - Full Width */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* ========================================
+   Landscape Phone Optimization
+   ======================================== */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding: var(--spacing-md) var(--spacing-md);
+    }
+
+    .page-header {
+        padding: var(--spacing-md) var(--spacing-md);
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ========================================
+   Large Desktop (1400px and above)
+   ======================================== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    h1 { font-size: 3rem; }
+
+    .hero h1 {
+        font-size: 3.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.375rem;
+    }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+    .header,
+    .nav-menu,
+    .mobile-menu-toggle,
+    .hero-cta,
+    .btn,
+    .final-cta,
+    .footer {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .page-header {
+        background: none;
+        color: black;
+    }
+
+    .page-header h1 {
+        color: black;
+    }
+}
+
+/* ========================================
+   Accessibility Enhancements
+   ======================================== */
+
+/* Focus Visible for Keyboard Navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-navy-accent);
+    outline-offset: 2px;
+}
+
+/* Reduced Motion for Users Who Prefer It */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-navy-primary: #000000;
+        --color-navy-accent: #0000FF;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
+        border-width: 3px;
+    }
+}
+
+/* Dark Mode Support (Optional - can be enabled) */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment to enable dark mode
+    :root {
+        --color-white: #1a1a1a;
+        --color-off-white: #242424;
+        --color-light-grey: #333333;
+        --color-dark-grey: #e0e0e0;
+    }
+
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    */
+}
+
+/* ========================================
+   Touch Device Optimizations
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .nav-menu a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Remove hover effects on touch devices */
+    .service-card:hover,
+    .pricing-card:hover,
+    .quick-service-card:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   Utility Classes for Responsive Visibility
+   ======================================== */
+.show-mobile {
+    display: none;
+}
+
+.hide-mobile {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .show-mobile {
+        display: block;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+/* ========================================
+   Performance Optimizations
+   ======================================== */
+
+/* GPU Acceleration for Animations */
+.btn,
+.service-card,
+.pricing-card,
+.quick-service-card {
+    will-change: transform;
+}
+
+/* Lazy Load Image Placeholder */
+img[loading="lazy"] {
+    background-color: var(--color-light-grey);
+}
