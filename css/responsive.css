@@ -122,6 +122,22 @@
     }
 
     /* Pricing */
+    .pricing-toggle-container {
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+
+    .toggle-label {
+        font-size: 1rem;
+    }
+
+    .savings-badge {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.25rem;
+        font-size: 0.75rem;
+    }
+
     .pricing-grid {
         grid-template-columns: 1fr;
     }
@@ -130,7 +146,9 @@
         grid-template-columns: 1fr;
     }
 
-    .costs-grid {
+    /* Optional Add-Ons remain horizontal with scroll on mobile */
+
+    .individual-services-grid {
         grid-template-columns: 1fr;
     }
 
@@ -250,6 +268,15 @@
 
     .discounted-price {
         font-size: 2rem;
+    }
+
+    .pricing-header h3 {
+        min-height: auto;
+        font-size: 1.25rem;
+    }
+
+    .pricing-header p {
+        min-height: auto;
     }
 
     /* About Page - Grids */
@@ -454,7 +481,7 @@ textarea:focus-visible {
 @media (prefers-contrast: high) {
     :root {
         --color-navy-primary: #000000;
-        --color-navy-accent: #0000FF;
+        --color-navy-accent: #003b73;
     }
 
     .btn-primary,

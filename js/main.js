@@ -545,6 +545,122 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// Pricing Toggle - Monthly/Yearly
+// ========================================
+(function() {
+    'use strict';
+
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPricingToggle);
+    } else {
+        initPricingToggle();
+    }
+
+    function initPricingToggle() {
+        const pricingToggle = document.getElementById('pricingToggle');
+        const pricingCards = document.querySelectorAll('.pricing-price');
+        const toggleLabels = document.querySelectorAll('.pricing-toggle-container .toggle-label');
+
+        console.log('=== Pricing Toggle Debug ===');
+        console.log('Toggle element:', pricingToggle);
+        console.log('Pricing cards:', pricingCards.length);
+        console.log('Labels:', toggleLabels.length);
+
+        if (!pricingToggle) {
+            console.log('No pricing toggle found on this page');
+            return;
+        }
+
+        if (pricingCards.length === 0) {
+            console.log('No pricing cards found on this page');
+            return;
+        }
+
+        // Set initial state - monthly is active
+        if (toggleLabels.length >= 1) {
+            toggleLabels[0].classList.add('active');
+        }
+
+        // Add change event listener
+        pricingToggle.addEventListener('change', function(e) {
+            const isYearly = e.target.checked;
+            console.log('Toggle switched to:', isYearly ? 'YEARLY' : 'MONTHLY');
+
+            // Update label styling
+            if (toggleLabels.length >= 2) {
+                toggleLabels[0].classList.toggle('active', !isYearly);
+                toggleLabels[1].classList.toggle('active', isYearly);
+            }
+
+            // Update all pricing displays
+            pricingCards.forEach((priceCard, index) => {
+                const monthlyPrice = priceCard.dataset.monthly;
+                const yearlyPrice = priceCard.dataset.yearly;
+                const suffix = priceCard.dataset.suffix || '';
+
+                const amountEl = priceCard.querySelector('.amount');
+                const periodEl = priceCard.querySelector('.period');
+
+                if (amountEl && periodEl) {
+                    if (isYearly) {
+                        amountEl.textContent = yearlyPrice;
+                        periodEl.textContent = '/year' + suffix;
+                        console.log(`Card ${index}: £${yearlyPrice}/year${suffix}`);
+                    } else {
+                        amountEl.textContent = monthlyPrice;
+                        periodEl.textContent = '/month' + suffix;
+                        console.log(`Card ${index}: £${monthlyPrice}/month${suffix}`);
+                    }
+                }
+            });
+        });
+
+        console.log('Pricing toggle initialized successfully!');
+    }
+})();
+
+// ========================================
+// Horizontal Scroll Indicator for Add-Ons
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const costsGridWrapper = document.querySelector('.costs-grid-wrapper');
+    const costsGrid = document.querySelector('.costs-grid');
+
+    if (costsGridWrapper && costsGrid) {
+        function checkScroll() {
+            // Check if content is scrollable
+            const hasScroll = costsGrid.scrollWidth > costsGrid.clientWidth;
+
+            if (hasScroll) {
+                costsGridWrapper.classList.add('has-scroll');
+            } else {
+                costsGridWrapper.classList.remove('has-scroll');
+            }
+        }
+
+        // Check on load
+        checkScroll();
+
+        // Check on window resize
+        window.addEventListener('resize', checkScroll);
+
+        // Remove gradient when scrolled to the end
+        costsGrid.addEventListener('scroll', function() {
+            const scrolledToEnd = Math.abs(
+                costsGrid.scrollWidth - costsGrid.clientWidth - costsGrid.scrollLeft
+            ) < 5;
+
+            if (scrolledToEnd) {
+                costsGridWrapper.classList.remove('has-scroll');
+            } else if (costsGrid.scrollWidth > costsGrid.clientWidth) {
+                costsGridWrapper.classList.add('has-scroll');
+            }
+        });
+    }
+});
+
+// ========================================
 // Console Welcome Message
 // ========================================
 console.log('%cRegStreet', 'font-size: 20px; font-weight: bold; color: #001F3F;');
