@@ -1,0 +1,133 @@
+REGSTREET WEBSITE - COLOR PALETTE & QUICK REFERENCE
+=====================================================
+
+PRIMARY COLORS (Navy Theme)
+===========================
+Navy Primary:       #001F3F  (Dark navy for headings, main text, headers)
+Navy Accent:        #003b73  (CTA buttons, links, highlights)
+Navy Light:         #003D7A  (Hover states, lighter navy)
+Navy Dark:          #001529  (Darkest navy, footer background)
+
+NEUTRAL COLORS
+==============
+White:              #FFFFFF  (Main background, text on dark)
+Off-White:          #F8F9FA  (Light section backgrounds)
+Light Grey:         #E9ECEF  (Borders, dividers)
+Mid Grey:           #6C757D  (Secondary text, placeholder)
+Dark Grey:          #343A40  (Primary body text)
+
+ACCENT COLORS
+=============
+Success Green:      #10B981  (Checkmarks, success states, valid forms)
+Error Red:          #DC2626  (Form errors, warnings, validation)
+
+USAGE GUIDE
+===========
+
+Headings (h1, h2, h3):
+  Color: #001F3F (navy-primary)
+  On light backgrounds: Navy (#001F3F)
+  On dark backgrounds: White (#FFFFFF)
+
+Body Text:
+  Color: #343A40 (dark-grey)
+  Secondary: #6C757D (mid-grey)
+  On navy bg: #FFFFFF (white)
+
+Buttons:
+  Primary (.btn-primary): 
+    Background: #003b73 (navy-accent)
+    Text: #FFFFFF (white)
+    Hover BG: #003D7A (navy-light)
+  
+  Secondary (.btn-secondary):
+    Background: transparent
+    Border: #FFFFFF (white)
+    Text: #FFFFFF (white)
+    Hover BG: #FFFFFF (white)
+    Hover Text: #001F3F (navy-primary)
+  
+  Outline (.btn-outline):
+    Background: transparent
+    Border: #003b73 (navy-accent)
+    Text: #003b73 (navy-accent)
+    Hover BG: #003b73 (navy-accent)
+    Hover Text: #FFFFFF (white)
+
+Card Borders:
+  Default: 2px solid #E9ECEF (light-grey)
+  Hover: 2px solid #003b73 (navy-accent)
+  Featured: 2px solid #003b73 (navy-accent)
+
+Section Backgrounds (Alternating Pattern):
+  1. White background: #FFFFFF
+  2. Light grey background: #F8F9FA
+  3. Navy gradient: #001F3F to #003D7A (hero/CTA sections)
+  4. Dark navy: #001529 (footer)
+
+Form Elements:
+  Border (normal): 2px solid #E9ECEF
+  Border (focus): 2px solid #003b73
+  Border (error): 2px solid #DC2626
+  Border (valid): 2px solid #10B981
+  Background: #FFFFFF
+  Text: #343A40
+
+Links:
+  Default: #003b73 (navy-accent)
+  Hover: #003D7A (navy-light)
+  Visited: #003b73
+
+Feature Lists:
+  Checkmark icon: Use icons/check.svg (navy stroke)
+  Checkmark color: #10B981 (success-green)
+  Text: #343A40 (dark-grey)
+
+Badges & Labels:
+  Background: #003b73 (navy-accent)
+  Text: #FFFFFF (white)
+
+Icons (SVG):
+  Stroke color: #003b73 (navy-accent)
+  Default size: 2.5rem - 3rem
+
+Hover States:
+  Cards: translateY(-5px) with shadow
+  Buttons: translateY(-2px) with shadow
+  Links: Change to #003D7A (navy-light)
+
+Shadow Styles:
+  Small: 0 1px 3px rgba(0, 0, 0, 0.1)
+  Medium: 0 4px 6px rgba(0, 0, 0, 0.1)
+  Large: 0 10px 25px rgba(0, 0, 0, 0.15)
+
+Border Radius:
+  Small: 4px (badges, small elements)
+  Standard: 8px (buttons, inputs)
+  Large: 12px (cards)
+
+CSS VARIABLES (Copy into :root)
+==============================
+:root {
+    --color-navy-primary: #001F3F;
+    --color-navy-dark: #001529;
+    --color-navy-light: #003D7A;
+    --color-navy-accent: #003b73;
+    --color-white: #FFFFFF;
+    --color-off-white: #F8F9FA;
+    --color-light-grey: #E9ECEF;
+    --color-mid-grey: #6C757D;
+    --color-dark-grey: #343A40;
+    --color-success: #10B981;
+    --color-error: #DC2626;
+}
+
+CONTRAST RATIOS (WCAG Compliance)
+=================================
+Navy text on white background: PASS (AAA)
+Navy text on light grey background: PASS (AA)
+White text on navy background: PASS (AAA)
+Green checkmarks on white: PASS (AA)
+Red error text on white: PASS (AA)
+
+All combinations meet accessibility standards

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistance Pricing - RegStreet</title>
+    <meta name="description" content="Professional UK-based virtual assistants handling your business admin, correspondence, and communications. Choose from our 4-tier strategic pricing plans.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* VA Pricing Grid - 4 column layout */
+        .pricing-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 1200px) {
+            .pricing-grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo1_white_nobg.png" alt="RegStreet - Professional UK Business Addresses" class="logo-img">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a href="pricing.html" class="active">Pricing</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html">Business Address</a></li>
+                        <li><a href="va-pricing.html">Virtual Assistance</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Virtual Assistance Pricing</h1>
+            <p>Professional UK-based virtual assistants handling your business admin, correspondence, and communications — so you can focus on growth.</p>
+            <p class="section-subtitle">Choose the plan that fits your business today — upgrade anytime as you grow.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Tables -->
+    <section class="pricing-section">
+        <div class="container">
+            <!-- Pricing Toggle -->
+            <div class="pricing-toggle-container">
+                <span class="toggle-label">Monthly</span>
+                <label class="pricing-toggle-switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">
+                    Annual
+                    <span class="savings-badge">Save 1 Month Free</span>
+                </span>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="pricing-grid pricing-grid-4">
+                <!-- VA Essential -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-icon"><img src="icons/mail.svg" alt=""></div>
+                        <h3>VA Essential</h3>
+                        <p>For solo directors or micro-businesses</p>
+                    </div>
+                    <div class="pricing-price" data-monthly="79.95" data-yearly="799.50">
+                        <span class="currency">£</span>
+                        <span class="amount">79.95</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Up to 5 correspondence actions/month</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Organizing mail & basic follow-up replies</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> 2 outbound calls per month</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Response within 2 business days</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Email-only assistance</li>
+                    </ul>
+                    <p class="ideal-for"><strong>Ideal for:</strong> Solo directors & micro-businesses</p>
+                    <a href="contact.html?service=va-essential" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <!-- VA Standard -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-icon"><img src="icons/chat.svg" alt=""></div>
+                        <h3>VA Standard</h3>
+                        <p>For small businesses needing regular help</p>
+                    </div>
+                    <div class="pricing-price" data-monthly="179.95" data-yearly="1799.50">
+                        <span class="currency">£</span>
+                        <span class="amount">179.95</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Up to 15 correspondence actions/month</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> 5 outbound calls per month</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Simple document prep (letters, forms)</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Diary reminders and basic scheduling</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Monthly report summary</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> 1 business-day response time</li>
+                    </ul>
+                    <p class="ideal-for"><strong>Ideal for:</strong> Small businesses needing regular help</p>
+                    <a href="contact.html?service=va-standard" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <!-- VA Professional (Most Popular) -->
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <div class="pricing-icon"><img src="icons/shield.svg" alt=""></div>
+                        <h3>VA Professional</h3>
+                        <p>Full, dependable weekly business admin support</p>
+                    </div>
+                    <div class="pricing-price" data-monthly="249.95" data-yearly="2499.50">
+                        <span class="currency">£</span>
+                        <span class="amount">249.95</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Up to 40 correspondence actions/month</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> 10 outbound calls/month</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Document prep (non-accounting/admin only)</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Weekly task updates via email</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Named assistant + backup cover</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Same-day response time</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Access to dedicated support portal</li>
+                    </ul>
+                    <p class="ideal-for"><strong>Ideal for:</strong> Growing businesses with weekly admin needs</p>
+                    <a href="contact.html?service=va-professional" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <!-- VA Executive -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-icon"><img src="icons/rocket.svg" alt=""></div>
+                        <h3>VA Executive</h3>
+                        <p>Ongoing operational assistance for directors</p>
+                    </div>
+                    <div class="pricing-price" data-monthly="399.95" data-yearly="3999.50">
+                        <span class="currency">£</span>
+                        <span class="amount">399.95</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Up to 80 correspondence actions/month</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> 20 outbound calls/month</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Meeting coordination & agenda creation</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Post-meeting summaries</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Priority task execution (same-day)</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Dedicated named assistant with direct phone</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Weekly performance reports</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Priority escalation access</li>
+                        <li><img src="icons/check.svg" class="inline-icon" alt=""> Optional limited weekend coverage</li>
+                    </ul>
+                    <p class="ideal-for"><strong>Ideal for:</strong> Established businesses & multi-director operations</p>
+                    <a href="contact.html?service=va-executive" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional Add-Ons -->
+    <section class="additional-costs">
+        <div class="container">
+            <h2>Optional Add-Ons</h2>
+            <p class="section-subtitle">Enhance your plan with additional services — add flexibility anytime</p>
+            <div class="costs-grid-wrapper">
+
+            <div class="costs-grid">
+                <div class="cost-item">
+                    <div class="addon-icon"><img src="icons/mail.svg" alt=""></div>
+                    <h4>Extra 10 Actions</h4>
+                    <p class="cost-price">£24.95/month</p>
+                    <p class="addon-description">Add more correspondence tasks to your plan</p>
+                </div>
+                <div class="cost-item">
+                    <div class="addon-icon"><img src="icons/chat.svg" alt=""></div>
+                    <h4>Extra 5 Calls</h4>
+                    <p class="cost-price">£19.95/month</p>
+                    <p class="addon-description">Additional outbound calls for client contact</p>
+                </div>
+                <div class="cost-item">
+                    <div class="addon-icon"><img src="icons/lightning.svg" alt=""></div>
+                    <h4>Extended Hours</h4>
+                    <p class="cost-price">£49.95/month</p>
+                    <p class="addon-description">Work window until 6pm + Saturday coverage</p>
+                </div>
+                <div class="cost-item">
+                    <div class="addon-icon"><img src="icons/shield.svg" alt=""></div>
+                    <h4>Telephone Answering</h4>
+                    <p class="cost-price">£79.99/year</p>
+                    <p class="addon-description">Discounted add-on for VA clients</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Information -->
+    <section class="transparency-section">
+        <div class="container">
+            <h2>What's Included with All VA Plans</h2>
+            <p class="section-subtitle">All plans include UK-based assistants, secure handling of your correspondence, and flexible service levels.</p>
+            <div class="promise-grid">
+                <div class="promise-item">
+                    <h3><img src="icons/check.svg" class="inline-icon" alt=""> UK-Based Assistants</h3>
+                    <p>All virtual assistants are based in the UK with professional training and experience.</p>
+                </div>
+                <div class="promise-item">
+                    <h3><img src="icons/check.svg" class="inline-icon" alt=""> Secure & Confidential</h3>
+                    <p>GDPR compliant handling of all your business correspondence and communications.</p>
+                </div>
+                <div class="promise-item">
+                    <h3><img src="icons/check.svg" class="inline-icon" alt=""> Flexible Service</h3>
+                    <p>Easily upgrade, downgrade, or pause services as your business needs change.</p>
+                </div>
+                <div class="promise-item">
+                    <h3><img src="icons/check.svg" class="inline-icon" alt=""> Monthly Reporting</h3>
+                    <p>Track all actions taken on your behalf with detailed monthly activity reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Address Cross-Link -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>Need a Professional Business Address?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Give your business a prestigious UK address for Companies House registration, mail handling, and professional credibility.</p>
+                <a href="pricing.html" class="btn btn-primary btn-large">View Business Address Pricing →</a>
+                <p style="margin-top: 1.5rem; color: #6c757d; font-size: 0.95rem;">Registered office addresses from £109/year</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Choose the plan that's right for your business and let our professional virtual assistants handle your admin work.</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Contact Us Today</a>
+            <p class="cta-subtext">UK-based assistants • Flexible plans • GDPR compliant</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>RegStreet</h4>
+                    <p>Suite 2, 2nd Floor<br>
+                    309 High Street<br>
+                    West Bromwich<br>
+                    West Midlands<br>
+                    B70 8LX<br>
+                    United Kingdom</p>
+                    <p><strong>Email:</strong> hello@regstreet.co.uk</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#registered-office">Registered Office Address</a></li>
+                        <li><a href="services.html#directors-address">Directors' Service Address</a></li>
+                        <li><a href="services.html#mail-forwarding">Mail Forwarding</a></li>
+                        <li><a href="services.html#company-formation">Company Formation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="va-pricing.html">VA Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html#cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RegStreet (JMAM Services Ltd). All rights reserved. Company Registration: 15023831</p>
+                <p class="footer-compliance">GDPR Compliant | AML Verified</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // VA Pricing specific billing toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const pricingToggle = document.getElementById('billingToggle');
+
+            if (pricingToggle) {
+                pricingToggle.addEventListener('change', function() {
+                    const isYearly = this.checked;
+
+                    document.querySelectorAll('.pricing-price').forEach(priceElement => {
+                        const monthly = priceElement.dataset.monthly;
+                        const yearly = priceElement.dataset.yearly;
+                        const amountSpan = priceElement.querySelector('.amount');
+                        const periodSpan = priceElement.querySelector('.period');
+
+                        if (isYearly) {
+                            amountSpan.textContent = yearly;
+                            periodSpan.textContent = '/year';
+                        } else {
+                            amountSpan.textContent = monthly;
+                            periodSpan.textContent = '/month';
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
